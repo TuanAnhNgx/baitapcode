@@ -2,12 +2,12 @@
 #include <cmath>
 #include <functional>
 
-// Hàm tính giá tr? c?a hàm s? t?i di?m (x, y)
+// Ham tinh gia tri cua ham so tai diem (x, y)
 double function(double x, double y) {
     return (2 - x - y);
 }
 
-// Hàm tích phân kép s? d?ng phuong pháp hình thang
+// Ham tich phan kep su dung phuong phap hinh thang
 double integrate(double lowerX, double upperX, std::function<double(double)> lowerY, std::function<double(double)> upperY, int n) {
     double deltaX = (upperX - lowerX) / n;
     double sum = 0;
@@ -26,11 +26,11 @@ double integrate(double lowerX, double upperX, std::function<double(double)> low
 
 // Hàm main
 int main() {
-    // Ð?nh nghia các hàm lambda cho gi?i h?n du?i và gi?i h?n trên c?a y
+    // ham lamlaba
     std::function<double(double)> lowerY =  { return -x; };
     std::function<double(double)> upperY =  { return 1-x; };
 
-    // Tính và in ra giá tr? c?a tích phân
+    // Tinh va in ra gia tri
     std::cout << "Giá tr? tích phân: " << integrate(0, 1, lowerY, upperY, 10000) << std::endl;
 
     return 0;
