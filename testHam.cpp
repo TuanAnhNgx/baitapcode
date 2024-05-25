@@ -33,7 +33,7 @@ int main(){
 	}
 	while(n<0);
 	
-		if(isPrimeWhile(n) == true){
+		if( isPrimeWhile(n) ){
 			printf("Day la so nguyen to");
 		}
 		else{
